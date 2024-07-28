@@ -8,15 +8,15 @@ namespace OnlineShopWebApp.Controllers
         {
             var currentHour = DateTime.Now.Hour;
 
-            if (currentHour >= 0 && currentHour <= 6)
+            if (currentHour >= 0 && currentHour < 6)
             {
                 return "Доброй ночи";
             }
-            if (currentHour > 6 && currentHour <= 11)
+            if (currentHour >= 6 && currentHour < 11)
             {
                 return "Доброе утро";
             }
-            if (currentHour > 11 && currentHour <= 17)
+            if (currentHour >= 11 && currentHour < 18)
             {
                 return "Добрый день";
             }
