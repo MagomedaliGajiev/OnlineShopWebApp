@@ -18,7 +18,7 @@ namespace OnlineShopWebApp
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}");
+                pattern: "{controller=Home}/{action=Index}/{a?}/{b?}/{operation?}");
 
             app.Run();
         }
