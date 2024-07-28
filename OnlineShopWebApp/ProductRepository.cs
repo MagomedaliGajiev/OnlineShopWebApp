@@ -17,5 +17,10 @@ namespace OnlineShopWebApp
         {
             return products;
         }
+
+        public Product TryGetById(Guid id)
+        {
+            return products.FirstOrDefault(product => product.Id == id);
+        }
     }
 }
