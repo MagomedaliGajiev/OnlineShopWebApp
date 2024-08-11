@@ -13,15 +13,10 @@ namespace OnlineShopWebApp.Controllers
             _productRepository = new ProductRepository();
         }
 
-        public string Index()
+        public IActionResult Index()
         {
             var products = _productRepository.GetAll();
-            var res = string.Empty;
-            foreach (var product in products)
-            {
-                res += product + "\n\n";
-            }
-            return res;
+            return View(products);
         }
 
         public IActionResult Privacy()
